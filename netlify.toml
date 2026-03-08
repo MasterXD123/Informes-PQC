@@ -1,16 +1,10 @@
 [build]
   command = "npm run build"
-  publish = ".next/standalone"
+  publish = ".next"
 
 [build.environment]
   NODE_VERSION = "20"
+  NEXT_TELEMETRY_DISABLED = "1"
 
-[[redirects]]
-  from = "/_next/static/(.*)"
-  to = "/_next/static/$1"
-  status = 200
-
-[[redirects]]
-  from = "/api/(.*)"
-  to = "/api/$1"
-  status = 200
+[[functions]]
+  directory = ".next/server/functions"
