@@ -1,0 +1,6 @@
+# Next.js redirects
+/_next/static/* /_next/static/:splat 200
+/api/* /api/:splat 200
+
+# SPA fallback - todas las demás rutas van a index.html
+/* /index.html 200
